@@ -1,0 +1,31 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.select{    
+    display: grid;
+    grid-template-rows: 50px 50px;
+    width: 500px;
+}
+.btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.btns_grp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+    width: 100px;
+    height: 50px;
+}
+
+span{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}

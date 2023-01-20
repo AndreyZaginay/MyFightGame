@@ -1,0 +1,37 @@
+<div class="gameDiv">
+  <div class="info" *ngIf="state$ | async as state">
+    <div class="yourStats stats">
+      <img src="{{ state.yourState.img }}" alt="" />
+      <p>You: {{ state.yourState.className }}</p>
+      <p>Hp: {{ state.yourState.yourHp }}</p>
+    </div>
+    <div class="enemyStats stats">
+      <img src="{{ state.enemyState.img }}" alt="" />
+      <p>Enemy: {{ state.enemyState.className }}</p>
+      <p>Hp: {{ state.enemyState.enemyHp }}</p>
+    </div>
+    <div class="buttons">
+      <button
+        mat-raised-button
+        color="primary"
+        *ngIf="!state.isGameEnd"
+        (click)="step()"
+      >
+        Attack
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        *ngIf="state.isGameEnd"
+        (click)="reset()"
+      >
+        Reset
+      </button>
+    </div>
+    <div class="msg">
+      <span *ngFor="let msg of state.outputMsg" class="msg"
+        ><p>{{ msg }}</p></span
+      >
+    </div>
+  </div>
+</div>

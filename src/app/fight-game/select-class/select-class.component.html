@@ -1,0 +1,11 @@
+<div class="select">
+  <span>Chose your class</span>
+  <div class="btns">
+    <div class="btns_grp" *ngFor="let class of classes">
+      <button mat-raised-button (click)="selectClass(class)">
+        {{ class.className }}
+      </button>
+      <button mat-raised-button (click)="openDialog(class)">Info</button>
+    </div>
+  </div>
+</div>

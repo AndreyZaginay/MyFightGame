@@ -1,0 +1,41 @@
+p {
+    margin: 0;
+}
+.gameDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.info {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 100px;
+}
+
+.state {
+    display: flex;
+}
+
+.enemyStats{
+    justify-self: right;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}
+.msg{
+    overflow-y:scroll;
+}
+
+.buttons {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+button {
+    width: 100px;
+    height: 75px;
+}
